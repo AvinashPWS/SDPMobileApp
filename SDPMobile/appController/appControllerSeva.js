@@ -55,6 +55,21 @@ var appControllerSeva = {
 
     },
 
-    errorAnnadanamMedia: function (sRequestJSON, sResponseJSON) { }
+    errorAnnadanamMedia: function (sRequestJSON, sResponseJSON) { },
+
+    requestPushSetting: function (sRequestJSON) {
+
+        appService.invoke("SetDeviceToken", sRequestJSON, appControllerSeva.responsePushSetting, appControllerSeva.errorPushSetting)
+    },
+
+    responsePushSetting: function (sRequestJSON, sResponseJSON) {
+
+        appViewPushSetting.responsePushSetting(sResponseJSON);
+
+    },
+
+    errorPushSetting: function (sRequestJSON, sResponseJSON) { },
+
+
 
 };

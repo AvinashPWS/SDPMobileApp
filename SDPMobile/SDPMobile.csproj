@@ -60,11 +60,13 @@
     <Content Include="appController\appControllerSeva.js" />
     <Content Include="appController\appControllerGallery.js" />
     <Content Include="appController\appControllerEvent.js" />
+    <Content Include="appEngine\appCore\bs\css\bootstrap-multiselect.css" />
     <Content Include="appEngine\appCore\bs\css\bootstrap-theme.css" />
     <Content Include="appEngine\appCore\bs\css\bootstrap-theme.min.css" />
     <Content Include="appEngine\appCore\bs\css\bootstrap.css" />
     <Content Include="appEngine\appCore\bs\css\bootstrap.min.css" />
     <Content Include="appEngine\appCore\bs\fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="appEngine\appCore\bs\js\bootstrap-multiselect.js" />
     <Content Include="appEngine\appCore\bs\js\bootstrap.js" />
     <Content Include="appEngine\appCore\bs\js\bootstrap.min.js" />
     <Content Include="appEngine\appCore\bs\js\npm.js" />
@@ -75,6 +77,7 @@
     <Content Include="appEngine\appUtility.js" />
     <Content Include="appViewUI\appViewCalendarGoogle.html" />
     <Content Include="appViewUI\appViewAnnadanam.html" />
+    <Content Include="appViewUI\appViewPushSetting.html" />
     <Content Include="appViewUI\appViewMenuLeft.html" />
     <Content Include="appViewUI\appViewMenuTop.html" />
     <Content Include="appViewUI\appViewMessage.html" />
@@ -131,6 +134,7 @@
     <Content Include="appView\appViewDailyEvent.js" />
     <Content Include="appView\appViewCalendarEvent.js" />
     <Content Include="appView\appViewAnnadanam.js" />
+    <Content Include="appView\appViewPushSetting.js" />
     <Content Include="appView\appViewUpcomingEvent.js" />
     <Content Include="appView\appViewRegularEvent.js" />
     <Content Include="appView\appViewSthalaSeva.js" />

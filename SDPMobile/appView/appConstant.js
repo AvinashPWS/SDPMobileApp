@@ -14,10 +14,11 @@
 ///<reference path='/appController/appControllerEvent.js' />
 ///<reference path='/appView/appViewSthalaSeva.js' />
 ///<reference path='/appView/appViewAnnadanam.js' />
+///<reference path='/appView/appViewPushSetting.js' />
 ///<reference path='/appController/appControllerSeva.js' />
 
 var appConstant = {
-    
+
     appViewIndex: "appViewIndex",
     appViewIndexID: "#appViewIndex",
     appViewDailyEvent: "appViewDailyEvent",
@@ -35,6 +36,8 @@ var appConstant = {
     appViewSthalaSeva: "appViewSthalaSeva",
     appViewSthalaSevaID: "#appViewSthalaSeva",
     appViewAnnadanam: "appViewAnnadanam",
-    appViewAnnadanamID: "#appViewAnnadanam"
+    appViewAnnadanamID: "#appViewAnnadanam",
+    appViewPushSetting: "appViewPushSetting",
+    appViewPushSettingID: "#appViewPushSetting"
 
 };
