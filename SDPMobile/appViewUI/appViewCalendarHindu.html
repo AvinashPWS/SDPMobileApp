@@ -1,0 +1,45 @@
+<!doctype html>
+<html>
+<head>
+    <title>Sai Datta Peetham</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <link rel="stylesheet" href="../appEngine/appCore/css/slidebars.min.css">
+    <link rel="stylesheet" href="../appEngine/appCore/css/style.css">
+    <link rel="stylesheet" href="../appEngine/appCore/css/flexslider.css" type="text/css" media="screen">
+</head>
+<body>
+    <!-- Top Navigation Bar -->
+    <div id="sb-top" class="sb-navbar sb-slide">
+    </div>
+
+    <!-- Your main site content in here -->
+    <div id="sb-site" class="row" style="text-align: center">
+        
+    </div>
+
+    <!-- Left Slidebar -->
+    <div id="sb-left" class="sb-slidebar sb-left">
+    </div>
+
+    <!-- Dont Delete this line -->
+    <div class="sb-slidebar sb-right">
+    </div>
+
+    <script src="../appEngine/appCore/js/jquery.min.js"></script>
+    <script src="../appEngine/appCore/js/slidebars.min.js"></script>
+    <script src="../appEngine/appCore/js/slidebars-theme.js"></script>
+    <script src="../appEngine/appCore/js/jquery.flexslider.js"></script>
+    <script src="../appEngine/appEngine.js"></script>
+    <script src="../appView/appViewCalendarEvent.js"></script>
+    <script src="../appController/appControllerEvent.js"></script>
+    <script>
+
+        $(document).ready(function () {
+            appEngine.initialize();
+            appViewCalendarEvent.initialize();
+        });
+
+    </script>
+
+</body>
+</html>
