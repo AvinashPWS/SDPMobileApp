@@ -5,6 +5,7 @@ var appEngine = {
 
         appEngine.appLoadEngineScript();
         appEngine.appViewInitialize();
+        document.addEventListener("deviceready", appEngine.appDeviceReady, false);
         //appPlayer.playAudio('http://saidattanj.org/images/saibaba.mp3');
     },
 
@@ -21,40 +22,42 @@ var appEngine = {
 
         try {
 
-            if (navigator.onLine) {
-                DeviceToken.register(function () {
+            //cordova.exec(function (sDeviceToken) { alert(sDeviceToken); }, function (sDeviceTokenError) { alert(sDeviceTokenError); }, "DeviceToken", "deviceToken", ["DeviceToken"]);
 
-                    DeviceToken.get(function (sDeviceToken) {
+            //alert("DEVICE READY");
 
-                        alert(sDeviceToken);
+            cordova.exec(function (sDeviceToken) {
 
-                        appUtility.setLocal("DeviceToken", sDeviceToken);
+                //alert(sDeviceToken);
 
-                        var sRole = appUtility.getLocal("PushNotificationRole");
+                appUtility.setLocal("DeviceToken", sDeviceToken);
 
-                        if (sRole == "") {
-                            sRole = "ALL";
-                            appUtility.setLocal("PushNotificationRole", "ALL");
-                        }
+                var sRole = appUtility.getLocal("PushNotificationRole");
 
-                        //SEND DEVICE TOKEN TO SERVER
-                        var sRequestJSON = {
+                if (sRole == "") {
+                    sRole = "ALL";
+                    appUtility.setLocal("PushNotificationRole", "ALL");
+                }
 
-                            sDeviceTokenJSON: appUtility.JSONToString({
-                                ID: 0,
-                                DEVICE_ID: appUtility.getLocal("DeviceToken"),
-                                DEVICE_TYPE: (device.platform).toUpperCase(),
-                                ROLE: sRole,
-                                DATETIME: "1"
-                            })
-                        };
+                //SEND DEVICE TOKEN TO SERVER
+                var sRequestJSON = {
 
-                        appControllerSeva.requestPushSetting(sRequestJSON);
+                    sDeviceTokenJSON: appUtility.JSONToString({
+                        ID: 0,
+                        DEVICE_ID: appUtility.getLocal("DeviceToken"),
+                        DEVICE_TYPE: (device.platform).toUpperCase(),
+                        ROLE: sRole,
+                        DATETIME: "1"
+                    })
+                };
 
-                    }, function () { });
+                appControllerSeva.requestPushSetting(sRequestJSON);
 
-                }, function () { });
-            }
+            }, function (sDeviceTokenError) {
+
+                //alert(sDeviceTokenError);
+
+            }, "DeviceToken", "get", ["GetDeviceToken"]);
 
             document.addEventListener("backbutton", appPlayer.onBackKeyDown, false);
         }
