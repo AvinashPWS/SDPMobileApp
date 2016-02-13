@@ -8,6 +8,10 @@ var appViewIndex = {
         appViewIndex.requestBannerEvents();
         appViewIndex.requestQuotes();
 
+        var sRole = appUtility.getLocal("PushNotificationRole");
+        if (sRole == "") {
+            appUtility.setLocal("PushNotificationRole", "ALL");
+        }
     },
     requestBannerEvents: function () {
         appControllerEvent.requestBannerEvents();
@@ -22,7 +26,7 @@ var appViewIndex = {
         for (var i in sResponseJSON) {
             var sBanner = sResponseJSON[i];
 
-            var sLi = $('<li></li>').attr("onclick", "window.open('" + sBanner['EVENT_TARGET'] + "', '_system', 'location=yes')");
+            var sLi = $('<li></li>').attr("onclick", "window.open('" + appUtility.getImagePath(sBanner['EVENT_TARGET']) + "', '_system', 'location=yes')");
 
             $(sLi).html('<img src="' + appUtility.getImagePath(sBanner['EVENT_ATTACHMENT']) + '">' +
                     '<div class="text-content">' + sBanner['EVENT_NAME'] + '</div>');
@@ -33,17 +37,15 @@ var appViewIndex = {
             animation: "slide"
         });
 
-        $.slidebars();
-
     },
     requestSponsorEvents: function () {
         appControllerEvent.requestSponsorEvents();
     },
     responseSponsorEvents: function (sResponseJSON) {
         //TBD
-        for(var i in sResponseJSON){
+        for (var i in sResponseJSON) {
             var sFlashNews = sResponseJSON[i];
-            var sPtag = $("<span></span>").html(" &#42; " + sFlashNews['EVENT_NAME'] +", ");
+            var sPtag = $("<span></span>").html(" &#42; " + sFlashNews['EVENT_NAME'] + ", ");
             $("#TodaySponsorMarquee h2").append(sPtag);
         }
     },
@@ -52,11 +54,11 @@ var appViewIndex = {
     },
     responseFlashEvents: function (sResponseJSON) {
         //TBD
-//        for(var i in sResponseJSON){
-//            var sFlashNews = sResponseJSON[i];
-//            var sPtag = $("<span></span>").html(" &#42; " + sFlashNews['EVENT_NAME'] +", ");
-//            $("#FlashNewsMarquee").append(sPtag);
-//        }
+        for (var i in sResponseJSON) {
+            var sFlashNews = sResponseJSON[i];
+            var sPtag = $("<span></span>").html(" &#42; " + sFlashNews['EVENT_NAME'] + ", ");
+            $("#FlashNewsMarquee").append(sPtag);
+        }
     },
     requestQuotes: function () {
         appControllerGallery.requestQuotes();

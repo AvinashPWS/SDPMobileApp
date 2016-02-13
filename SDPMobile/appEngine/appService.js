@@ -4,6 +4,7 @@ var sHTTPVerb = "POST";
 var sDataType = "json";
 var sContentType = "application/json; charset=utf-8";
 //var APP_SERVICE_URL = "http://localhost:64046/SDPAdmin/API/SDPMobileService.aspx/";
+//var APP_SITE_URL = "http://localhost:64046";
 var APP_SERVICE_URL = "http://saidattanj.org/SDPAdmin/API/SDPMobileService.aspx/";
 var APP_SITE_URL = "http://saidattanj.org";
 
@@ -53,7 +54,7 @@ function appServiceWrapper() {
 
                 beforeSend: function (xhr) { },
                 complete: function (jqXHR, textStatus) {
-                    
+
                 }
             });
 

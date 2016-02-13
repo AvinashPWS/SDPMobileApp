@@ -5,7 +5,7 @@ var appEngine = {
 
         appEngine.appLoadEngineScript();
         appEngine.appViewInitialize();
-        //appPlayer.playAudio();
+        //appPlayer.playAudio('http://saidattanj.org/images/saibaba.mp3');
     },
 
     appViewInitialize: function () {
@@ -15,14 +15,47 @@ var appEngine = {
         appEngine.getHTML("appViewMessage.html", function (sResponseHTML) { $("body").append(sResponseHTML); });
 
         $.slidebars();
-
-        document.addEventListener("deviceready", appEngine.appDeviceReady, false);
     },
 
     appDeviceReady: function () {
 
         try {
-            //appPlayer.playAudio();
+
+            if (navigator.onLine) {
+                DeviceToken.register(function () {
+
+                    DeviceToken.get(function (sDeviceToken) {
+
+                        alert(sDeviceToken);
+
+                        appUtility.setLocal("DeviceToken", sDeviceToken);
+
+                        var sRole = appUtility.getLocal("PushNotificationRole");
+
+                        if (sRole == "") {
+                            sRole = "ALL";
+                            appUtility.setLocal("PushNotificationRole", "ALL");
+                        }
+
+                        //SEND DEVICE TOKEN TO SERVER
+                        var sRequestJSON = {
+
+                            sDeviceTokenJSON: appUtility.JSONToString({
+                                ID: 0,
+                                DEVICE_ID: appUtility.getLocal("DeviceToken"),
+                                DEVICE_TYPE: (device.platform).toUpperCase(),
+                                ROLE: sRole,
+                                DATETIME: "1"
+                            })
+                        };
+
+                        appControllerSeva.requestPushSetting(sRequestJSON);
+
+                    }, function () { });
+
+                }, function () { });
+            }
+
             document.addEventListener("backbutton", appPlayer.onBackKeyDown, false);
         }
         catch (e) {

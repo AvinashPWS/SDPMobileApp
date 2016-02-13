@@ -4,11 +4,11 @@
     <title>Sai Datta Peetham</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <link rel="stylesheet" href="../appEngine/appCore/css/slidebars.min.css">
-    <link rel="stylesheet" href="../appEngine/appCore/css/saidatta.css" type="text/css" />
+    <link rel="stylesheet" href="../appEngine/appCore/css/saidatta.css"  />
     <link rel="stylesheet" href="../appEngine/appCore/css/style.css">
+    <link rel="stylesheet" href="../appEngine/appCore/css/accordi-styles.css" />
     <link rel="stylesheet" href="../appEngine/appCore/bs/css/bootstrap.min.css">
     <link rel="stylesheet" href="../appEngine/appCore/bs/css/bootstrap-theme.min.css">
-    <link rel="stylesheet" href="../appEngine/appCore/css/flexslider.css" type="text/css" media="screen">
 </head>
 <body>
     <!-- Top Navigation Bar -->
@@ -126,9 +126,11 @@
     <script src="../appEngine/appCore/js/jquery.min.js"></script>
     <script src="../appEngine/appCore/bs/js/bootstrap.min.js"></script>
     <script src="../appEngine/appCore/js/slidebars.min.js"></script>
-    <script src="../appEngine/appCore/js/slidebars-theme.js"></script>
-    <script src="../appEngine/appCore/js/jquery.flexslider.js"></script>
+    <script src="../appEngine/appCore/js/accordi-main.js"></script>
+    <script src="../appEngine/underscore-min.js"></script>
+    <script src="../appEngine/appDeviceToken.js"></script>
     <script src="../appEngine/appEngine.js"></script>
+
     <script src="../appView/appViewAnnadanam.js"></script>
     <script src="../appController/appControllerSeva.js"></script>
     <script>
@@ -139,6 +141,9 @@
         });
 
     </script>
+
+    <script src="../appEngine/appCore/js/slidebars-theme.js"></script>
+
     <script type="text/template" id="appViewAnnadanamMediaList-template">
         <ul>
             <% for(var i in sTemplateJSON) { %>

@@ -1,0 +1,131 @@
+<!doctype html>
+<html>
+<head>
+    <title>Sai Datta Peetham</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <link rel="stylesheet" href="../appEngine/appCore/css/slidebars.min.css">
+    <link rel="stylesheet" href="../appEngine/appCore/css/saidatta.css" />
+    <link rel="stylesheet" href="../appEngine/appCore/css/style.css">
+    <link rel="stylesheet" href="../appEngine/appCore/css/accordi-styles.css" />
+    <link rel="stylesheet" href="../appEngine/appCore/bs/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../appEngine/appCore/bs/css/bootstrap-theme.min.css">
+</head>
+<body id="appViewDonationSthala">
+    <!-- Top Navigation Bar -->
+    <div id="sb-top" class="sb-navbar sb-slide">
+    </div>
+    <!-- Your main site content in here -->
+    <div id="sb-site">
+        <div id="appViewDonationSthalaForm1" class="panel panel-default">
+            <div class="panel-body">
+                <div class="form-group">
+                    <label for="appViewDonationSthalaEmailInput">Email: </label>
+                    <div class="input-group">
+                        <input type="email" class="form-control" id="appViewDonationSthalaEmailInput" placeholder="Email">
+                        <span class="input-group-btn">
+                            <a class="btn btn-default clearbtn form-control">
+                                <i class="glyphicon glyphicon-remove-circle"></i>
+                            </a>
+                        </span>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="appViewDonationSthalaPhoneInput">Phone: </label>
+                    <div class="input-group">
+                        <input type="number" class="form-control" id="appViewDonationSthalaPhoneInput" placeholder="Phone">
+                        <span class="input-group-btn">
+                            <a class="btn btn-default clearbtn form-control">
+                                <i class="glyphicon glyphicon-remove-circle"></i>
+                            </a>
+                        </span>
+                    </div>
+                </div>
+                <div class="text-center">
+                    <a class="btn btn-primary" onclick="javascript:appViewDonationSthala.showFrom2();">Add Sponsors</a>
+                </div>
+            </div>
+        </div>
+        <div id="appViewDonationSthalaForm2">
+            <div class="clearfix m-b-xs">
+                <a class="btn btn-danger pull-left" onclick="javascript:appViewDonationSthala.showFrom1();">Back</a>
+                <a class="btn btn-primary pull-right" onclick="javascript:appViewDonationSthala.addSponsor();">Add Sponsor</a>
+            </div>
+            <div id="appViewDonationSthalaSponsorList">
+            </div>
+            <div class="well well-sm">
+                Total Amount to be Transfered : <span id="appViewDonationSthalaSponsorCount">0 </span> * $11 = $<span id="appViewDonationSthalaTotalAmount">0</span>
+            </div>
+            <div class="text-center">
+                <a class="btn btn-success" onclick="javascript:appViewDonationSthala.submitSponsors();">Submit</a>
+            </div>
+        </div>
+        <div class="hide">
+            <form action="https://www.paypal.com/cgi-bin/webscr" name="paypalform" method="post" target="_top">
+                <input type="hidden" name="cmd" value="_donations">
+                <input type="hidden" name="business" value="saidattamandirnj@gmail.com">
+                <input type="hidden" name="lc" value="US">
+                <input type="hidden" name="item_name" value="Sai Datta Peetham">
+                <input type="hidden" name="no_note" value="0">
+                <input type="hidden" name="cn" value="Add special instructions to the seller:">
+                <input type="hidden" name="no_shipping" value="2">
+                <input type="hidden" name="currency_code" value="USD">
+                <input type="hidden" name="amount" id="appViewDonationSthalapaypalformAmount" value="">
+                <input type="hidden" name="bn" value="PP-DonationsBF:btn_donateCC_LG.gif:NonHosted">
+            </form>
+        </div>
+    </div>
+    <!-- Left Slidebar -->
+    <div id="sb-left" class="sb-slidebar sb-left">
+    </div>
+    <!-- Dont Delete this line -->
+    <div class="sb-slidebar sb-right">
+    </div>
+
+    <script src="../appEngine/appCore/js/jquery.min.js"></script>
+    <script src="../appEngine/appCore/bs/js/bootstrap.min.js"></script>
+    <script src="../appEngine/appCore/js/slidebars.min.js"></script>
+    <script src="../appEngine/appCore/js/accordi-main.js"></script>
+    <script src="../appEngine/underscore-min.js"></script>
+    <script src="../appEngine/appDeviceToken.js"></script>
+    <script src="../appEngine/appEngine.js"></script>
+    <script src="../appView/appViewDonationSthala.js"></script>
+    <script src="../appController/appControllerDonation.js"></script>
+    <script>
+
+        $(document).ready(function () {
+            appEngine.initialize();
+            appViewDonationSthala.initialize();
+        });
+
+    </script>
+
+    <script src="../appEngine/appCore/js/slidebars-theme.js"></script>
+
+    <script type="text/template" id="appViewDonationSthalaSponsorList-template">
+        <div class="panel panel-default" data-role="sponsor">
+            <div class="panel-body">
+                <a href="#" onclick="javascript:appViewDonationSthala.deleteSponsor(this);" class="pull-right" style="margin-top: -15px;margin-right: -15px">
+                    <i class="glyphicon glyphicon-remove-circle" style="font-size: 18px"></i>
+                </a>
+                <div class="input-group">
+                    <input type="text" class="form-control" value="" placeholder="Firstname" />
+                    <span class="input-group-btn">
+                        <a class="btn btn-default clearbtn form-control">
+                            <i class="glyphicon glyphicon-remove-circle"></i>
+                        </a>
+                    </span>
+                </div>
+                <br>
+                <div class="input-group">
+                    <input type="text" class="form-control" value="" placeholder="Lastname" />
+                    <span class="input-group-btn">
+                        <a class="btn btn-default clearbtn form-control">
+                            <i class="glyphicon glyphicon-remove-circle"></i>
+                        </a>
+                    </span>
+                </div>
+            </div>
+        </div>
+    </script>
+</body>
+</html>

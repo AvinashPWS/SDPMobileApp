@@ -4,7 +4,7 @@ var sMedia = null;
 var appPlayer = {
 
     initialize: function () {
-        
+
         try {
             $("#appViewIndexMusicImage").attr("src", "../appEngine/appCore/img/pause.png");
         }
@@ -25,10 +25,13 @@ var appPlayer = {
         navigator.app.exitApp();
     },
 
-    playAudio: function () {
+    playAudio: function (sAudioURL) {
 
         // Play the audio file at url
-        sMedia = new Audio('http://saidattanj.org/images/saibaba.mp3');
+        //sMedia = new Audio('http://saidattanj.org/images/saibaba.mp3');
+
+        sMedia = new Audio(sAudioURL);
+
         // Play audio
         sMedia.play();
         $("#appViewIndexMusicImage").attr("src", "../appEngine/appCore/img/pause.png");

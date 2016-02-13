@@ -54,6 +54,24 @@ var appControllerGallery = {
 
     },
 
-    errorQuotes: function (sRequestJSON, sResponseJSON) { }
+    errorQuotes: function (sRequestJSON, sResponseJSON) { },
+
+    requestAudio: function () {
+
+        var sRequestJSON = {
+
+            sSP_Name: "LIST_AUDIO"
+        };
+
+        appService.invoke("GetData", sRequestJSON, appControllerGallery.responseAudio, appControllerGallery.errorAudio)
+    },
+
+    responseAudio: function (sRequestJSON, sResponseJSON) {
+
+        appViewAudioGallery.responseAudio(sResponseJSON);
+
+    },
+
+    errorAudio: function (sRequestJSON, sResponseJSON) { },
 
 };

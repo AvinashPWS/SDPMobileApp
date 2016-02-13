@@ -4,8 +4,11 @@
     <title>Sai Datta Peetham</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <link rel="stylesheet" href="../appEngine/appCore/css/slidebars.min.css">
+    <link rel="stylesheet" href="../appEngine/appCore/css/saidatta.css" />
     <link rel="stylesheet" href="../appEngine/appCore/css/style.css">
-    <link rel="stylesheet" href="../appEngine/appCore/css/flexslider.css" type="text/css" media="screen">
+    <link rel="stylesheet" href="../appEngine/appCore/css/accordi-styles.css" />
+    <link rel="stylesheet" href="../appEngine/appCore/bs/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../appEngine/appCore/bs/css/bootstrap-theme.min.css">>
 </head>
 <body>
     <!-- Top Navigation Bar -->
@@ -18,52 +21,181 @@
             <h4 class="text-center">
                 Donations
             </h4>
-            <p>
-                Sai Datta Peetham is a non-profit organization and established as a centre for prayers,
-                worship, celebrating and sharing Sai Sadguru's message and invoking his blessings
-                for the betterment of human lives, materially and spiritually. Sai Datta Peetham,
-                is a tax-exempt organization under Section 501(c)(3) of the Internal Revenue Code.
-                All donations made in USA are tax deductible.
-            </p>
-            <div class="donationBox" align="center">
-                <strong>Make Cheques payable to</strong><br>
+            <div id="appViewDonationDescription">
                 <p>
-                    <strong style="font-size: 18px; line-height: 40px; text-decoration: underline;">
-                        Sai
-                        Datta Mandir
-                    </strong><br>
-                    902 Oak Tree Road, Suite 100,<br>
-                    South Plainfield,<br>
-                    NJ 07080
+                    Sai Datta Peetham is a non-profit organization and established as a centre for prayers,
+                    worship, celebrating and sharing Sai Sadguru's message and invoking his blessings
+                    for the betterment of human lives, materially and spiritually. Sai Datta Peetham,
+                    is a tax-exempt organization under Section 501(c)(3) of the Internal Revenue Code.
+                    All donations made in USA are tax deductible.
+                </p>
+                <div class="donationBox" align="center">
+                    <strong>Make Cheques payable to</strong><br>
+                    <p>
+                        <strong style="font-size: 18px; line-height: 40px; text-decoration: underline;">
+                            Sai
+                            Datta Mandir
+                        </strong><br>
+                        902 Oak Tree Road, Suite 100,<br>
+                        South Plainfield,<br>
+                        NJ 07080
+                    </p>
+                </div>
+                <p>
+                    Sai Datta Peetham has strong desire to support and promote philosophy of Shirdi
+                    Sai Baba and is mainly dependent on the donations by devotees. We have expansion
+                    plans to improve our facilities and enhance the experiences of our devotees when
+                    they visit the Sai Datta Peetham.
+                </p>
+                <!--				<a href="">
+                    <img src="http://www.saidattanj.org/images/pay-pal.gif">
+                </a>-->
+                <p>
+                    We need your support
+                </p>
+                <p>
+                    You can willingly donate to Sri Sai Datta Peetham for various activities.
+                </p>
+                <p style="color: rgb(228, 143, 0); font-size: 16px;">
+                    To Donate for Flowers, Annadanam, Temple construction and General donations.
+                    Please <a href="javascript:appViewDonation.showForm1();" class="btn btn-sm btn-primary">Click</a> here
                 </p>
             </div>
-            <p>
-                Sai Datta Peetham has strong desire to support and promote philosophy of Shirdi
-                Sai Baba and is mainly dependent on the donations by devotees. We have expansion
-                plans to improve our facilities and enhance the experiences of our devotees when
-                they visit the Sai Datta Peetham.
-            </p>
-            <!--				<a href="">
-                <img src="http://www.saidattanj.org/images/pay-pal.gif">
-            </a>-->
-            <p>
-                We need your support
-            </p>
-            <p>
-                You can willingly donate to Sri Sai Datta Peetham for various activities.
-            </p>
-            <p style="color: rgb(228, 143, 0); font-size: 16px;">
-                To Donate for Flowers, Annadanam, Temple construction and General donations. Please
-                click on below link...
-            </p>
-            <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_blank">
-                <input type="hidden" name="cmd" value="_s-xclick">
-                <input type="hidden" name="hosted_button_id" value="FEUELMCE9QLBU">
-                <input type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_donateCC_LG.gif"
-                       border="0" name="submit" alt="PayPal - The safer, easier way to pay online!">
-                <img alt="" border="0" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif"
-                     width="1" height="1">
-            </form>
+            <div id="appViewDonationForm1">
+                <div class="form-group">
+                    <label for="appViewDonationDonationType">Donation Type: </label>
+                    <select class="form-control" data-role="requried" id="appViewDonationDonationType"></select>
+                </div>
+                <div class="form-group">
+                    <label for="appViewDonationTotalAmount">Total Amount: </label>
+                    <div class="input-group">
+                        <input type="text" disabled="disabled" data-role="requried" class="form-control" value="100" id="appViewDonationTotalAmount" />
+                        <span class="input-group-btn">
+                            <a class="btn btn-default clearbtn form-control">
+                                <i class="glyphicon glyphicon-usd"></i>
+                            </a>
+                        </span>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="appViewDonationNameInput">Name: </label>
+                    <div class="input-group">
+                        <input type="text" class="form-control" data-role="requried" id="appViewDonationNameInput" />
+                        <span class="input-group-btn">
+                            <a class="btn btn-default clearbtn form-control">
+                                <i class="glyphicon glyphicon-remove-circle"></i>
+                            </a>
+                        </span>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="appViewDonationNakshatramInput">Nakshatram: </label>
+                    <div class="input-group">
+                        <input type="text" class="form-control" data-role="requried" id="appViewDonationNakshatramInput" />
+                        <span class="input-group-btn">
+                            <a class="btn btn-default clearbtn form-control">
+                                <i class="glyphicon glyphicon-remove-circle"></i>
+                            </a>
+                        </span>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="appViewDonationEmailInput">Email: </label>
+                    <div class="input-group">
+                        <input type="email" class="form-control" data-role="requried" id="appViewDonationEmailInput" />
+                        <span class="input-group-btn">
+                            <a class="btn btn-default clearbtn form-control">
+                                <i class="glyphicon glyphicon-remove-circle"></i>
+                            </a>
+                        </span>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="appViewDonationPhoneInput">Phone: </label>
+                    <div class="input-group">
+                        <input type="number" class="form-control" data-role="requried" id="appViewDonationPhoneInput" />
+                        <span class="input-group-btn">
+                            <a class="btn btn-default clearbtn form-control">
+                                <i class="glyphicon glyphicon-remove-circle"></i>
+                            </a>
+                        </span>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="appViewDonationGotramInput">Gotram: </label>
+                    <div class="input-group">
+                        <input type="text" class="form-control" id="appViewDonationGotramInput" />
+                        <span class="input-group-btn">
+                            <a class="btn btn-default clearbtn form-control">
+                                <i class="glyphicon glyphicon-remove-circle"></i>
+                            </a>
+                        </span>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="appViewDonationDateOnInput">Date On: </label>
+                    <div class="input-group">
+                        <input type="date" class="form-control" data-role="requried" id="appViewDonationDateOnInput" />
+                        <span class="input-group-btn">
+                            <a class="btn btn-default clearbtn form-control">
+                                <i class="glyphicon glyphicon-remove-circle"></i>
+                            </a>
+                        </span>
+                    </div>
+                </div>
+                <div class="clearfix m-b-xs">
+                    <a class="btn btn-danger pull-left" onclick="javascript:appViewDonation.showDescription();">Back</a>
+                    <a class="btn btn-primary pull-right" href="javascript:appViewDonation.showForm2();" role="button">Next</a>
+                </div>
+            </div>
+            <div id="appViewDonationForm2">
+                <div class="clearfix m-b-xs">
+                    <a class="btn btn-danger pull-left" onclick="javascript:appViewDonation.showForm1();">Back</a>
+
+                    <a class="btn btn-primary pull-right" onclick="javascript:appViewDonation.addFamilyMembers();">Add Family Members</a>
+                </div>
+                <div id="appViewDonationFamilyMembersList">
+                    <div class="panel panel-default" data-role="FamilyMembers">
+                        <div class="panel-body">
+                            <div class="input-group">
+                                <input type="text" class="form-control" value="" disabled="disabled" placeholder="Name" />
+                                <span class="input-group-btn">
+                                    <a class="btn btn-default clearbtn form-control">
+                                        <i class="glyphicon glyphicon-remove-circle"></i>
+                                    </a>
+                                </span>
+                            </div>
+                            <br>
+                            <div class="input-group">
+                                <input type="text" class="form-control" value="" disabled="disabled" placeholder="Nakshatram" />
+                                <span class="input-group-btn">
+                                    <a class="btn btn-default clearbtn form-control">
+                                        <i class="glyphicon glyphicon-remove-circle"></i>
+                                    </a>
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="text-center">
+                        <input type="image" name="imgSaveDonation" id="imgSaveDonation" src="http://saidattanj.org/images/pay-pal.gif" onclick="javascript:appViewDonation.submitDonation();" />
+                    </div>
+                </div>
+            </div>
+
+            <div class="hide">
+                <form action="https://www.paypal.com/cgi-bin/webscr" name="paypalform" method="post" target="_top">
+                    <input type="hidden" name="cmd" value="_donations">
+                    <input type="hidden" name="business" value="saidattamandirnj@gmail.com">
+                    <input type="hidden" name="lc" value="US">
+                    <input type="hidden" name="item_name" id="appViewDonationItemNameHidden" value="Sai Datta Peetham">
+                    <input type="hidden" name="no_note" value="0">
+                    <input type="hidden" name="cn" value="Add special instructions to the seller:">
+                    <input type="hidden" name="no_shipping" value="2">
+                    <input type="hidden" name="currency_code" value="USD">
+                    <input type="hidden" name="amount" id="appViewDonationTotalAmountHidden" value="">
+                    <input type="hidden" name="bn" value="PP-DonationsBF:btn_donateCC_LG.gif:NonHosted">
+                </form>
+            </div>
         </div>
 
     </div>
@@ -76,17 +208,53 @@
     <div class="sb-slidebar sb-right">
     </div>
 
+
     <script src="../appEngine/appCore/js/jquery.min.js"></script>
+    <script src="../appEngine/appCore/bs/js/bootstrap.min.js"></script>
     <script src="../appEngine/appCore/js/slidebars.min.js"></script>
-    <script src="../appEngine/appCore/js/slidebars-theme.js"></script>
-    <script src="../appEngine/appCore/js/jquery.flexslider.js"></script>
+    <script src="../appEngine/appCore/js/accordi-main.js"></script>
+    <script src="../appEngine/underscore-min.js"></script>
+    <script src="../appEngine/appDeviceToken.js"></script>
     <script src="../appEngine/appEngine.js"></script>
+
+    <script src="../appView/appViewDonation.js"></script>
+    <script src="../appController/appControllerDonation.js"></script>
     <script>
 
         $(document).ready(function () {
             appEngine.initialize();
+            appViewDonation.initialize();
         });
 
+    </script>
+
+    <script src="../appEngine/appCore/js/slidebars-theme.js"></script>
+
+    <script type="text/template" id="appViewDonationFamilyMembersList-template">
+        <div class="panel panel-default" data-role="FamilyMembers">
+            <div class="panel-body">
+                <a href="#" onclick="javascript:appViewDonation.removeFamilyMembers(this);" class="pull-right" style="margin-top: -15px;margin-right: -15px">
+                    <i class="glyphicon glyphicon-remove-circle" style="font-size: 18px"></i>
+                </a>
+                <div class="input-group">
+                    <input type="text" class="form-control" value="" placeholder="Firstname" />
+                    <span class="input-group-btn">
+                        <a class="btn btn-default clearbtn form-control">
+                            <i class="glyphicon glyphicon-remove-circle"></i>
+                        </a>
+                    </span>
+                </div>
+                <br>
+                <div class="input-group">
+                    <input type="text" class="form-control" value="" placeholder="Lastname" />
+                    <span class="input-group-btn">
+                        <a class="btn btn-default clearbtn form-control">
+                            <i class="glyphicon glyphicon-remove-circle"></i>
+                        </a>
+                    </span>
+                </div>
+            </div>
+        </div>
     </script>
 
 </body>

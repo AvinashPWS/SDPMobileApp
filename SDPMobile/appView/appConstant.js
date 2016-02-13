@@ -4,6 +4,7 @@
 ///<reference path='/appEngine/appService.js' />
 ///<reference path='/appEngine/appUtility.js' />
 ///<reference path='/appView/appViewIndex.js' />
+///<reference path='/appView/appViewAudioGallery.js' />
 ///<reference path='/appView/appViewImageGallery.js' />
 ///<reference path='/appView/appViewVideoGallery.js' />
 ///<reference path='/appController/appControllerGallery.js' />
@@ -16,6 +17,9 @@
 ///<reference path='/appView/appViewAnnadanam.js' />
 ///<reference path='/appView/appViewPushSetting.js' />
 ///<reference path='/appController/appControllerSeva.js' />
+///<reference path='/appView/appViewDonation.js' />
+///<reference path='/appView/appViewDonationSthala.js' />
+///<reference path='/appController/appControllerDonation.js' />
 
 var appConstant = {
 
@@ -38,6 +42,10 @@ var appConstant = {
     appViewAnnadanam: "appViewAnnadanam",
     appViewAnnadanamID: "#appViewAnnadanam",
     appViewPushSetting: "appViewPushSetting",
-    appViewPushSettingID: "#appViewPushSetting"
+    appViewPushSettingID: "#appViewPushSetting",
+    appViewDonation: "appViewDonation",
+    appViewDonationID: "#appViewDonation",
+    appViewDonationSthala: "appViewDonationSthala",
+    appViewDonationSthalaID: "#appViewDonationSthala"
 
 };

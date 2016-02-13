@@ -57,6 +57,7 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="appController\appControllerDonation.js" />
     <Content Include="appController\appControllerSeva.js" />
     <Content Include="appController\appControllerGallery.js" />
     <Content Include="appController\appControllerEvent.js" />
@@ -72,11 +73,15 @@
     <Content Include="appEngine\appCore\bs\js\npm.js" />
     <Content Include="appEngine\appCore\fonts\glyphicons-halflings-regular.svg" />
     <Content Include="appEngine\appCore\img\sai-old-back.png" />
+    <Content Include="appEngine\appDeviceToken.js" />
     <Content Include="appEngine\appEngine.js" />
     <Content Include="appEngine\appService.js" />
     <Content Include="appEngine\appUtility.js" />
+    <Content Include="appEngine\underscore-min.js" />
     <Content Include="appViewUI\appViewCalendarGoogle.html" />
     <Content Include="appViewUI\appViewAnnadanam.html" />
+    <Content Include="appViewUI\appViewAudioGallery.html" />
+    <Content Include="appViewUI\appViewDonationSthala.html" />
     <Content Include="appViewUI\appViewPushSetting.html" />
     <Content Include="appViewUI\appViewMenuLeft.html" />
     <Content Include="appViewUI\appViewMenuTop.html" />
@@ -134,6 +139,9 @@
     <Content Include="appView\appViewDailyEvent.js" />
     <Content Include="appView\appViewCalendarEvent.js" />
     <Content Include="appView\appViewAnnadanam.js" />
+    <Content Include="appView\appViewAudioGallery.js" />
+    <Content Include="appView\appViewDonation.js" />
+    <Content Include="appView\appViewDonationSthala.js" />
     <Content Include="appView\appViewPushSetting.js" />
     <Content Include="appView\appViewUpcomingEvent.js" />
     <Content Include="appView\appViewRegularEvent.js" />
