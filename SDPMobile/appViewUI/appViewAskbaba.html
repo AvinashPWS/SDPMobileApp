@@ -1,0 +1,67 @@
+<!doctype html>
+<html>
+    <head>
+        <title>Sai Datta Peetham</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+        <link href="../appEngine/appCore/bs/css/bootstrap.min.css" rel="stylesheet" type="text/css"/>
+        <link href="../appEngine/appCore/bs/css/bootstrap-theme.min.css" rel="stylesheet" type="text/css"/>
+        <link rel="stylesheet" href="../appEngine/appCore/css/slidebars.min.css">
+        <link rel="stylesheet" href="../appEngine/appCore/css/saidatta.css" />
+        <link rel="stylesheet" href="../appEngine/appCore/css/style.css">
+        <link rel="stylesheet" href="../appEngine/appCore/css/flexslider.css" media="screen">
+    </head>
+    <body>
+        <!-- Top Navigation Bar -->
+        <div id="sb-top" class="sb-navbar sb-slide">
+        </div>
+
+        <!-- Your main site content in here -->
+        <div id="sb-site">
+            <!--<h4 class="event-heading">Flash News</h4>-->
+            <div id="appViewAskBabaForm" class="panel panel-default">
+                <div class="panel-body">
+                    <div class="form-group">
+                        <!--<label for="appViewIndexAskBabaTextarea">Email: </label>-->
+                        <textarea id="appViewIndexAskBabaTextarea" class="form-control" style="resize: none">
+                            
+                        </textarea>             
+                    </div>
+                    <div class="clearfix text-center">                       
+                        <a href="javascript:appViewAskbaba.onClickAskbaba();" class="btn btn-success">
+                            Ask baba
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="well well-lg">
+                Test
+            </div>
+        </div>
+
+        <!-- Left Slidebar -->
+        <div id="sb-left" class="sb-slidebar sb-left">
+        </div>
+
+        <!-- Dont Delete this line -->
+        <div class="sb-slidebar sb-right">
+        </div>
+
+        <script src="../appEngine/appCore/js/jquery.min.js"></script>
+        <script src="../appEngine/appCore/js/slidebars.min.js"></script>
+        <script src="../appEngine/appCore/js/jquery.flexslider.js"></script>
+        <script src="../appEngine/underscore-min.js"></script>
+        <script src="../appEngine/appEngine.js"></script>
+
+        <script src="../appView/appViewAskbaba.js"></script>
+        <script>
+
+            $(document).ready(function () {
+                appEngine.initialize();
+                appViewAskbaba.initialize();
+            });
+
+        </script>
+        <script src="../appEngine/appCore/js/slidebars-theme.js"></script>
+        <script src="../cordova.js"></script>
+    </body>
+</html>
