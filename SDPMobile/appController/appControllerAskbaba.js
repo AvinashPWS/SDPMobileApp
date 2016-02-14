@@ -7,6 +7,8 @@
 
 var appControllerAskbaba = {
     requestQuote: function () {
+        
+        appControllerAskbaba.responseQuote();
 
         var sRequestJSON = {
             "sSP_Name": "LIST_QUOTES"

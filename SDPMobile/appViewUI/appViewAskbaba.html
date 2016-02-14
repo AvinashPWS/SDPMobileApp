@@ -33,9 +33,15 @@
                     </div>
                 </div>
             </div>
-            <div class="well well-lg">
-                Test
+            <div id="appViewAskBabaQuote">
+                <div class="clearfix">
+                    <a class="btn btn-success pull-left" onclick="javascript:appViewAskbaba.initialize();">Back</a>
+                </div>
+                <div id="appViewAskBabaQuoteText" class="well well-lg  m-t-xs">
+                    Test
+                </div>
             </div>
+
         </div>
 
         <!-- Left Slidebar -->
@@ -53,12 +59,13 @@
         <script src="../appEngine/appEngine.js"></script>
 
         <script src="../appView/appViewAskbaba.js"></script>
+        <script src="../appController/appControllerAskbaba.js"></script>
         <script>
 
-            $(document).ready(function () {
-                appEngine.initialize();
-                appViewAskbaba.initialize();
-            });
+                        $(document).ready(function () {
+                            appEngine.initialize();
+                            appViewAskbaba.initialize();
+                        });
 
         </script>
         <script src="../appEngine/appCore/js/slidebars-theme.js"></script>

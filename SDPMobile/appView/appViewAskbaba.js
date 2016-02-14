@@ -9,13 +9,18 @@
 
 var appViewAskbaba = {
     initialize: function () {
-
+        $("#appViewAskBabaForm").show();
+        $("#appViewAskBabaQuote").hide();
     },
-    onClickAskbaba:function (){
-        
+    onClickAskbaba: function () {
+        appControllerAskbaba.requestQuote();
     },
-    responseQuote:function (sResponseJSON){
+    responseQuote: function (sResponseJSON) {
         
+        $("#appViewAskBabaQuoteText").html();
+        
+        $("#appViewAskBabaForm").hide();
+        $("#appViewAskBabaQuote").show();
     }
 
 };
