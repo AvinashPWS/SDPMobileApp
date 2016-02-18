@@ -9,16 +9,24 @@
 
 var appViewAskbaba = {
     initialize: function () {
+        $("#appViewIndexAskBabaTextarea").val('').focus();
         $("#appViewAskBabaForm").show();
         $("#appViewAskBabaQuote").hide();
     },
     onClickAskbaba: function () {
-        appControllerAskbaba.requestQuote();
+        if ($.trim($("#appViewIndexAskBabaTextarea").val()) !== '') {
+            appControllerAskbaba.requestQuote();
+        }else{
+            $("#appViewIndexAskBabaTextarea").focus();
+        }
     },
     responseQuote: function (sResponseJSON) {
-        
-        $("#appViewAskBabaQuoteText").html();
-        
+
+        if (sResponseJSON && sResponseJSON['QUOTE'])
+            $("#appViewAskBabaQuoteText").html(sResponseJSON['QUOTE']);
+        else
+            $("#appViewAskBabaQuoteText").html("Thank you");
+
         $("#appViewAskBabaForm").hide();
         $("#appViewAskBabaQuote").show();
     }
