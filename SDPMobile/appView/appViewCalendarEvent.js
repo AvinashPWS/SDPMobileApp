@@ -14,17 +14,26 @@ var appViewCalendarEvent = {
         for (var i in sResponseJSON) {
             var sMonth = sResponseJSON[i];
 
-            var sDiv = $('<div class="col-md-6"></div>');
-            var sH4 = $('<h4></h4>').html(sMonth['EVENT_NAME']);
+            var sDiv = $('<div></div>');
+            var sH4 = $('<h4 class="text-center"></h4>').html(sMonth['EVENT_NAME']);
+            var sAnchor = $('<a></a>').attr('href', 'javascript:appViewCalendarEvent.showBigCalenderImage("' + sMonth['EVENT_TARGET'] + '")')
             var sImg = $('<img>').attr('src', appUtility.getImagePath(sMonth['EVENT_ATTACHMENT']));
-            $(sDiv).html(sH4).append(sImg);
+            $(sAnchor).html(sImg);
+            $(sDiv).html(sH4).append(sAnchor);
 
-            $("#sb-site").append(sDiv);
+            $("#appViewCalenderHinduList").append(sDiv);
 
         }
-        
-//        $("#sb-site").css("height", $("body").height()+"px");
 
+    },
+    showBigCalenderImage: function (imagePath) {
+        $("#appViewCalenderHinduBigImage").attr('src', imagePath);
+        $("#appViewCalenderHinduList").hide();
+        $("#appViewCalenderHinduBigImageSection").show();
+    },
+    hideBigCalenderImage:function (){
+        $("#appViewCalenderHinduList").show();
+        $("#appViewCalenderHinduBigImageSection").hide();
     }
 
 };
