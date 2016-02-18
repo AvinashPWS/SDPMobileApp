@@ -57,6 +57,7 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="appController\appControllerAskbaba.js" />
     <Content Include="appController\appControllerDonation.js" />
     <Content Include="appController\appControllerSeva.js" />
     <Content Include="appController\appControllerGallery.js" />
@@ -78,6 +79,7 @@
     <Content Include="appEngine\appService.js" />
     <Content Include="appEngine\appUtility.js" />
     <Content Include="appEngine\underscore-min.js" />
+    <Content Include="appViewUI\appViewAskbaba.html" />
     <Content Include="appViewUI\appViewCalendarGoogle.html" />
     <Content Include="appViewUI\appViewAnnadanam.html" />
     <Content Include="appViewUI\appViewAudioGallery.html" />
@@ -136,6 +138,7 @@
     <Content Include="appEngine\appCore\js\slidebars.min.js" />
     <Content Include="appViewUI\appViewVolunteerConfirm.html" />
     <Content Include="appViewUI\appViewVolunteerSignUp.html" />
+    <Content Include="appView\appViewAskbaba.js" />
     <Content Include="appView\appViewDailyEvent.js" />
     <Content Include="appView\appViewCalendarEvent.js" />
     <Content Include="appView\appViewAnnadanam.js" />
