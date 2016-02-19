@@ -512,5 +512,13 @@ var appUtility = {
             return Math.floor($(window).height() - sMinusHeight);
         }
         return Math.floor($(window).height() - 300);
+    },
+    validateEmail: function (email) {
+        var re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+        return re.test(email);
+    },
+    validatePhoneNo: function (phoneno) {
+        var re = /^(\+\d{1,2}\s)?\(?\d{3}\)?[\s.-]\d{3}[\s.-]\d{4}$/;
+        return re.test(phoneno);
     }
 };
