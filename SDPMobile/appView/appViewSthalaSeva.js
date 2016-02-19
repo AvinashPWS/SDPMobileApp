@@ -43,6 +43,8 @@ var appViewSthalaSeva = {
 
     backToVideoList: function () {
 
+        appPlayer.playPause();
+
         $("#sb-site").show();
 
         $("#appViewSthalaSevaPlayScreen").hide();
@@ -52,6 +54,8 @@ var appViewSthalaSeva = {
     },
 
     playVideo: function (sVideoId) {
+
+        appPlayer.playPause();
 
         $("#appViewSthalaSevaiFrame").attr("src", "http://www.youtube.com/embed/" + sVideoId);
 

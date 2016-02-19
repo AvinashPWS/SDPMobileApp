@@ -23,6 +23,8 @@ var appViewAudioGallery = {
 
     getAudio: function (sAudioURL) {
        
+        appPlayer.playPause();
+
         sAudioURL = sAudioURL.replace("~", APP_SITE_URL);
 
         appPlayer.playAudio(sAudioURL);

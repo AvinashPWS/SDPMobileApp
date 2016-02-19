@@ -28,6 +28,8 @@ var appViewVideoGallery = {
 
     backToVideoList: function () {
 
+        appPlayer.playPause();
+
         $("#sb-site").show();
 
         $("#appViewVideoPlayScreen").hide();
@@ -36,6 +38,8 @@ var appViewVideoGallery = {
 
     },
     playVideo: function (sVideoId) {
+
+        appPlayer.playPause();
 
         $("#appViewVideoiFrame").attr("src", "http://www.youtube.com/embed/" + sVideoId);
 

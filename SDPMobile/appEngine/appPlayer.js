@@ -41,7 +41,7 @@ var appPlayer = {
 
         try {
             if (sMedia == null) {
-                appPlayer.playAudio();
+                appPlayer.playAudio('http://saidattanj.org/images/saibaba.mp3');
                 $("#appViewIndexMusicImage").attr("src", "../appEngine/appCore/img/pause.png");
             }
             else {

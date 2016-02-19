@@ -26,6 +26,8 @@ var appViewAnnadanam = {
 
     backToVideoList: function () {
 
+        appPlayer.playPause();
+
         $("#sb-site").show();
 
         $("#appViewAnnadanamPlayScreen").hide();
@@ -35,6 +37,8 @@ var appViewAnnadanam = {
     },
 
     playVideo: function (sVideoId) {
+
+        appPlayer.playPause();
 
         $("#appViewAnnadanamiFrame").attr("src", "http://www.youtube.com/embed/" + sVideoId);
 

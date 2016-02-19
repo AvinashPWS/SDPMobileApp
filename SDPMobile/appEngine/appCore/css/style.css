@@ -116,7 +116,7 @@ html, body
 #sb-site
 {
     /*background-image: url('../img/bg.png');*/
-    min-height:auto !important;
+    /*min-height:auto !important;*/
     background: #E48F00;
     background-repeat: repeat;
     padding: 70px 5px 15px;
