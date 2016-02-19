@@ -22,6 +22,10 @@ var appEngine = {
 
         try {
 
+            try { 
+                navigator.splashscreen.show();
+            } catch (e) { }
+
             //cordova.exec(function (sDeviceToken) { alert(sDeviceToken); }, function (sDeviceTokenError) { alert(sDeviceTokenError); }, "DeviceToken", "deviceToken", ["DeviceToken"]);
 
             //alert("DEVICE READY");

@@ -3,6 +3,10 @@
 var appViewIndex = {
     initialize: function () {
 
+        try {
+            navigator.splashscreen.hide();
+        } catch (e) { }
+
         appViewIndex.requestFlashEvents();
         appViewIndex.requestSponsorEvents();
         appViewIndex.requestBannerEvents();
