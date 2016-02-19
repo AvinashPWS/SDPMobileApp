@@ -3,13 +3,6 @@ var appEngine = {
 
     initialize: function () {
 
-
-        try {
-            navigator.splashscreen.hide();
-        } catch (e) { }
-
-
-
         appEngine.appLoadEngineScript();
         appEngine.appViewInitialize();
         document.addEventListener("deviceready", appEngine.appDeviceReady, false);
@@ -29,9 +22,15 @@ var appEngine = {
 
         try {
 
-            try { 
+            try {
+
                 navigator.splashscreen.show();
-            } catch (e) { }
+                window.setTimeout(function () { navigator.splashscreen.hide(); }, 1000);
+                
+
+            } catch (e) {
+
+            }
 
             //cordova.exec(function (sDeviceToken) { alert(sDeviceToken); }, function (sDeviceTokenError) { alert(sDeviceTokenError); }, "DeviceToken", "deviceToken", ["DeviceToken"]);
 
