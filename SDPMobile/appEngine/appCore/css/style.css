@@ -116,6 +116,7 @@ html, body
 #sb-site
 {
     /*background-image: url('../img/bg.png');*/
+    min-height:auto !important;
     background: #E48F00;
     background-repeat: repeat;
     padding: 70px 5px 15px;
@@ -450,7 +451,16 @@ h4
     {
         padding: 10px 0px 0px 20px;
         float: left;
-        width: 125px;
+        
+    }
+}
+@media (min-width: 0px) and (max-width: 360px)
+{
+    .logo
+    {
+        padding: 10px 0px 0px 20px;
+        float: left;
+        width: 200px;
     }
 }
 .navicon-line
