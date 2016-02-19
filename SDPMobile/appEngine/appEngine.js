@@ -3,6 +3,13 @@ var appEngine = {
 
     initialize: function () {
 
+
+        try {
+            navigator.splashscreen.hide();
+        } catch (e) { }
+
+
+
         appEngine.appLoadEngineScript();
         appEngine.appViewInitialize();
         document.addEventListener("deviceready", appEngine.appDeviceReady, false);
