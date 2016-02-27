@@ -3,9 +3,9 @@ var appEngine = {
 
     initialize: function () {
 
+        document.addEventListener("deviceready", appEngine.appDeviceReady, false);
         appEngine.appLoadEngineScript();
         appEngine.appViewInitialize();
-        document.addEventListener("deviceready", appEngine.appDeviceReady, false);
         appPlayer.playAudio('http://saidattanj.org/images/saibaba.mp3');
     },
 
@@ -21,16 +21,6 @@ var appEngine = {
     appDeviceReady: function () {
 
         try {
-
-            try {
-
-                navigator.splashscreen.show();
-                window.setTimeout(function () { navigator.splashscreen.hide(); }, 1000);
-                
-
-            } catch (e) {
-
-            }
 
             //cordova.exec(function (sDeviceToken) { alert(sDeviceToken); }, function (sDeviceTokenError) { alert(sDeviceTokenError); }, "DeviceToken", "deviceToken", ["DeviceToken"]);
 

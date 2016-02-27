@@ -9,7 +9,7 @@ var APP_SERVICE_URL = "http://saidattanj.org/SDPAdmin/API/SDPMobileService.aspx/
 var APP_SITE_URL = "http://saidattanj.org";
 
 sVersion = "1.0.0";
-
+sSplashScreen = true;
 var appService = {
 
     invoke: function (sMethodName, sJSONData, sSuccessCallback, sErrorCallback) {
