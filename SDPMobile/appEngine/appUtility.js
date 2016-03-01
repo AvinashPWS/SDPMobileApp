@@ -30,12 +30,12 @@ var appUtility = {
 
     },
     showProgress: function () {
+        $("body").append($('<div></div>').attr('class','waitingmodal'));
         $("body").addClass("loading");
     },
     closeProgress: function () {
-        if (sCloseProgress) {
-            $("body").removeClass("loading");
-        }
+        $(".waitingmodal").remove();
+        $("body").removeClass("loading");
     },
     showModal: function (sModalID) {
 
@@ -44,7 +44,7 @@ var appUtility = {
     },
     closeModal: function (sModalID) {
 
-        $(sModalID).modal('hide')
+        $(sModalID).modal('hide');
 
     },
     setSession: function (sKey, sValue) {
@@ -99,8 +99,7 @@ var appUtility = {
             }
 
             sTime = sHours + ":" + sMins + ":" + sSecs;
-        }
-        else {
+        } else {
             sTime = sDate.getTime();
         }
 
@@ -153,8 +152,7 @@ var appUtility = {
         var sDateObject = new Date();
 
         if (sDate == undefined || sDate == null) {
-        }
-        else {
+        } else {
             sDate = sDate.split("-");
             sDateObject = new Date(sDate[0], sDate[1] - 1, sDate[2]); //YYYY,MM,DD
         }
@@ -326,8 +324,7 @@ var appUtility = {
 
         if (sDateTime.indexOf("T") != -1) {
             sDateTime = sDateTime.split("T")[0];
-        }
-        else {
+        } else {
             sDateTime = sDateTime.split(" ")[0];
         }
 
@@ -432,8 +429,7 @@ var appUtility = {
         if (!$(sCheckboxID).is(":checked")) {
             $(sCheckboxID).next().attr("class", "fa fa-fw fa-square-o");
             $(sListID).find("i[class='fa fa-fw fa-square-o checked']").attr("class", "fa fa-fw fa-square-o");
-        }
-        else {
+        } else {
             $(sCheckboxID).next().attr("class", "fa fa-fw fa-square-o checked");
             $(sListID).find("i[class='fa fa-fw fa-square-o']").attr("class", "fa fa-fw fa-square-o checked");
         }
@@ -473,8 +469,7 @@ var appUtility = {
 
         if (sTable == "") {
             sTable = [];
-        }
-        else {
+        } else {
             sTable = appUtility.stringToJSON(sTable);
             sTable = sTable["Table"];
         }
