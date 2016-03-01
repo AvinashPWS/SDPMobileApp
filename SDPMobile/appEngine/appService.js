@@ -29,7 +29,7 @@ function appServiceWrapper() {
         sRequestJSONForServer: "",
 
         invoke: function (sMethodName, sJSONData, sSuccessCallback, sErrorCallback) {
-
+            debugger;
             appUtility.showProgress();
 
             appServiceClass.sSERVER_URL = APP_SERVICE_URL;
@@ -61,11 +61,13 @@ function appServiceWrapper() {
         },
 
         appServiceSuccessCallback: function (sResponseJSON) {
+            appUtility.closeProgress();
             var sRequestJSON = appServiceClass.sRequestJSONForServer;
             appServiceClass.sSuccessCallback(sRequestJSON, sResponseJSON);
         },
 
         appServiceErrorCallback: function (sResponseJSON, sStatusCode, sErrorText) {
+            appUtility.closeProgress();
             var sRequestJSON = appServiceClass.sRequestJSONForServer;
             appServiceClass.sErrorCallback(sRequestJSON, sResponseJSON);
         }
