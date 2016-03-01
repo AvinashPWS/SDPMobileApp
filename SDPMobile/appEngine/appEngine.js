@@ -2,7 +2,7 @@
 var appEngine = {
 
     initialize: function () {
-
+        
         document.addEventListener("deviceready", appEngine.appDeviceReady, false);
         appEngine.appLoadEngineScript();
         appEngine.appViewInitialize();
