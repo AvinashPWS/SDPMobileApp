@@ -23,6 +23,13 @@ var appEngine = {
                 }
                 catch (e) { }
             }
+        }else{
+            try {
+                    if (sCallback != undefined) {
+                        sCallback();
+                    }
+                }
+                catch (e) { }
         }
 
     },
