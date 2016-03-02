@@ -23,13 +23,13 @@ var appEngine = {
                 }
                 catch (e) { }
             }
-        }else{
+        } else {
             try {
-                    if (sCallback != undefined) {
-                        sCallback();
-                    }
+                if (sCallback != undefined) {
+                    sCallback();
                 }
-                catch (e) { }
+            }
+            catch (e) { }
         }
 
     },
