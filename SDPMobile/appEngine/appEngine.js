@@ -3,18 +3,18 @@ var appEngine = {
 
     initialize: function (sCallback) {
 
-        appUtility.setSession("deviceready", false);
-
         appEngine.appLoadEngineScript();
         appEngine.appViewInitialize();
         appPlayer.playAudio('http://saidattanj.org/images/saibaba.mp3');
+
+        appUtility.setSession("deviceready", false);
 
         if (/Android|webOS|iPhone|iPad|iPod/i.test(navigator.userAgent)) {
 
             document.addEventListener("deviceready", function () { appEngine.appDeviceReady(sCallback); }, false);
 
             var sCheck = appUtility.getSession("deviceready");
-            
+
             if (sCheck) {
                 try {
                     if (sCallback != undefined) {
