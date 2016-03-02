@@ -14,6 +14,8 @@ var appViewDonation = {
         });
 
         $("#sb-site").css("min-height", "0px");
+
+        $("#sb-site .pujaList").css({"min-height": appUtility.setHeight(1) + "px", "max-height": "0px"});
     },
     onChangeDonationType: function (sSelector) {
         var amount = $(sSelector).val();
@@ -31,6 +33,7 @@ var appViewDonation = {
         $("#appViewDonationDescription").hide();
         $("#appViewDonationForm1").show();
         $("#appViewDonationForm2").hide();
+        $("body").scrollTop(0);
     },
     showForm2: function () {
 
@@ -46,6 +49,8 @@ var appViewDonation = {
         $("#appViewDonationDescription").hide();
         $("#appViewDonationForm1").hide();
         $("#appViewDonationForm2").show();
+        
+        $("body").scrollTop(0);
     },
     addFamilyMembers: function () {
 
@@ -141,7 +146,6 @@ var appViewDonation = {
 
         return false;
     },
-
     responseSetDonation: function (sResponseJSON) {
 
         if (sResponseJSON['STATUS'] === 'TRUE') {
