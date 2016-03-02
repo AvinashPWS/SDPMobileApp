@@ -45,7 +45,7 @@ var appViewIndex = {
         //TBD
         for (var i in sResponseJSON) {
             var sFlashNews = sResponseJSON[i];
-            var sPtag = $("<span></span>").html(" &#42; " + sFlashNews['EVENT_NAME'] + ", ");
+            var sPtag = $("<span></span>").html(" &#42; " + sFlashNews['EVENT_NAME']);
             $("#TodaySponsorMarquee h2").append(sPtag);
         }
     },
@@ -56,7 +56,7 @@ var appViewIndex = {
         //TBD
         for (var i in sResponseJSON) {
             var sFlashNews = sResponseJSON[i];
-            var sPtag = $("<span></span>").html(" &#42; " + sFlashNews['EVENT_NAME'] + ", ");
+            var sPtag = $("<span></span>").html(" &#42; " + sFlashNews['EVENT_NAME']);
             $("#FlashNewsMarquee").append(sPtag);
         }
     },
