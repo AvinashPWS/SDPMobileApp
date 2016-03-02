@@ -48,8 +48,8 @@
     <script>
 
         $(document).ready(function () {
-            appEngine.initialize();
-            appViewUpcomingEvent.initialize();
+            appEngine.initialize(appViewUpcomingEvent.initialize);
+//            appViewUpcomingEvent.initialize();
         });
 
     </script>

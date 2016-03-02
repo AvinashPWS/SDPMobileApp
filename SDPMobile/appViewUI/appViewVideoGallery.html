@@ -53,8 +53,8 @@
     <script>
 
         $(document).ready(function () {
-            appEngine.initialize();
-            appViewVideoGallery.initialize();
+            appEngine.initialize(appViewVideoGallery.initialize);
+//            appViewVideoGallery.initialize();
         });
 
     </script>
