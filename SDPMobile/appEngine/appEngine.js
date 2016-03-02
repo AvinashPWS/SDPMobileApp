@@ -10,6 +10,12 @@ var appEngine = {
             appEngine.appLoadEngineScript();
             appEngine.appViewInitialize();
             appPlayer.playAudio('http://saidattanj.org/images/saibaba.mp3');
+            
+            try {
+                if (sCallback != undefined)
+                    sCallback();
+            }
+            catch (e) { }
         }
     },
 
