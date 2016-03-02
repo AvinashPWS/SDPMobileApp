@@ -77,8 +77,8 @@
     <script>
 
         $(document).ready(function () {
-            appEngine.initialize();
-            appViewIndex.initialize();
+            appEngine.initialize(appViewIndex.initialize);
+            //appViewIndex.initialize();
         });
 
     </script>

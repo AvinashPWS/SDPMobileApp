@@ -48,8 +48,8 @@
     <script>
 
         $(document).ready(function () {
-            appEngine.initialize();
-            appViewAudioGallery.initialize();
+            appEngine.initialize(appViewAudioGallery.initialize);
+            //appViewAudioGallery.initialize();
         });
 
     </script>

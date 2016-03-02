@@ -46,8 +46,8 @@
     <script>
 
         $(document).ready(function () {
-            appEngine.initialize();
-            appViewDailyEvent.initialize();
+            appEngine.initialize(appViewDailyEvent.initialize);
+            //appViewDailyEvent.initialize();
         });
 
     </script>

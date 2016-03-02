@@ -51,8 +51,8 @@
         <script>
 
                             $(document).ready(function () {
-                                appEngine.initialize();
-                                appViewCalendarEvent.initialize();
+                                appEngine.initialize(appViewCalendarEvent.initialize);
+                                //appViewCalendarEvent.initialize();
                             });
 
         </script>

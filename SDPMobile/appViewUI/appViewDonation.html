@@ -222,8 +222,8 @@
     <script>
 
         $(document).ready(function () {
-            appEngine.initialize();
-            appViewDonation.initialize();
+            appEngine.initialize(appViewDonation.initialize);
+            //appViewDonation.initialize();
         });
 
     </script>

@@ -63,8 +63,8 @@
         <script>
 
                         $(document).ready(function () {
-                            appEngine.initialize();
-                            appViewAskbaba.initialize();
+                            appEngine.initialize(appViewAskbaba.initialize);
+                            //appViewAskbaba.initialize();
                         });
 
         </script>

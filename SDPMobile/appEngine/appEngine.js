@@ -1,10 +1,10 @@
 ﻿///<reference path='/appView/appConstant.js' />
 var appEngine = {
 
-    initialize: function () {
+    initialize: function (sCallback) {
 
         if (/Android|webOS|iPhone|iPad|iPod/i.test(navigator.userAgent)) {
-            document.addEventListener("deviceready", appEngine.appDeviceReady, false);
+            document.addEventListener("deviceready", function () { appEngine.appDeviceReady(sCallback); }, false);
         }
         else {
             appEngine.appLoadEngineScript();
@@ -22,13 +22,19 @@ var appEngine = {
         $.slidebars();
     },
 
-    appDeviceReady: function () {
+    appDeviceReady: function (sCallback) {
 
         try {
 
             appEngine.appLoadEngineScript();
             appEngine.appViewInitialize();
             appPlayer.playAudio('http://saidattanj.org/images/saibaba.mp3');
+
+            try {
+                if (sCallback != undefined)
+                    sCallback();
+            }
+            catch (e) { }
 
             //cordova.exec(function (sDeviceToken) { alert(sDeviceToken); }, function (sDeviceTokenError) { alert(sDeviceTokenError); }, "DeviceToken", "deviceToken", ["DeviceToken"]);
 

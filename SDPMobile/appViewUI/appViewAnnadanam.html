@@ -136,8 +136,8 @@
     <script>
 
         $(document).ready(function () {
-            appEngine.initialize();
-            appViewAnnadanam.initialize();
+            appEngine.initialize(appViewAnnadanam.initialize);
+            //appViewAnnadanam.initialize();
         });
 
     </script>
