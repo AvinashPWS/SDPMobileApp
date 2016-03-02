@@ -29,7 +29,7 @@ function appServiceWrapper() {
         sRequestJSONForServer: "",
 
         invoke: function (sMethodName, sJSONData, sSuccessCallback, sErrorCallback) {
-            debugger;
+            
             appUtility.showProgress();
 
             appServiceClass.sSERVER_URL = APP_SERVICE_URL;
