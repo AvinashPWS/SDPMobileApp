@@ -3,14 +3,28 @@ var appEngine = {
 
     initialize: function (sCallback) {
 
+        appUtility.setSession("deviceready", false);
+
+        appEngine.appLoadEngineScript();
+        appEngine.appViewInitialize();
+        appPlayer.playAudio('http://saidattanj.org/images/saibaba.mp3');
+
         if (/Android|webOS|iPhone|iPad|iPod/i.test(navigator.userAgent)) {
+
             document.addEventListener("deviceready", function () { appEngine.appDeviceReady(sCallback); }, false);
+
+            var sCheck = appUtility.getSession("deviceready");
+            
+            if (sCheck) {
+                try {
+                    if (sCallback != undefined) {
+                        sCallback();
+                    }
+                }
+                catch (e) { }
+            }
         }
-        else {
-            appEngine.appLoadEngineScript();
-            appEngine.appViewInitialize();
-            appPlayer.playAudio('http://saidattanj.org/images/saibaba.mp3');
-        }
+
     },
 
     appViewInitialize: function () {
@@ -24,15 +38,14 @@ var appEngine = {
 
     appDeviceReady: function (sCallback) {
 
+        appUtility.setSession("deviceready", true);
+
         try {
 
-            appEngine.appLoadEngineScript();
-            appEngine.appViewInitialize();
-            appPlayer.playAudio('http://saidattanj.org/images/saibaba.mp3');
-
             try {
-                if (sCallback != undefined)
+                if (sCallback != undefined) {
                     sCallback();
+                }
             }
             catch (e) { }
 
