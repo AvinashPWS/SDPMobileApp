@@ -70,6 +70,17 @@ var appControllerSeva = {
 
     errorPushSetting: function (sRequestJSON, sResponseJSON) { },
 
+    requestPushSettingSilent: function (sRequestJSON) {
+
+        appService.invoke("SetDeviceToken", sRequestJSON, appControllerSeva.responsePushSettingSilent, appControllerSeva.errorPushSettingSilent)
+    },
+
+    responsePushSettingSilent: function (sRequestJSON, sResponseJSON) {
+
+    },
+
+    errorPushSettingSilent: function (sRequestJSON, sResponseJSON) { }
+
 
 
 };

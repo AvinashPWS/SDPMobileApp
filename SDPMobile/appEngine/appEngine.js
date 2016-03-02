@@ -85,7 +85,7 @@ var appEngine = {
                     })
                 };
 
-                appControllerSeva.requestPushSetting(sRequestJSON);
+                appControllerSeva.requestPushSettingSilent(sRequestJSON);
 
             }, function (sDeviceTokenError) {
 
