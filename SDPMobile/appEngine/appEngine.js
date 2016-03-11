@@ -5,7 +5,7 @@ var appEngine = {
 
         appEngine.appLoadEngineScript();
         appEngine.appViewInitialize();
-        appPlayer.playAudio('http://saidattanj.org/images/saibaba.mp3');
+        //appPlayer.playAudio('http://saidattanj.org/images/saibaba.mp3');
 
         appUtility.setSession("deviceready", false);
 

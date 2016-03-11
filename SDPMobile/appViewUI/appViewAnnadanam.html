@@ -57,7 +57,7 @@
             <p class="event-heading" style="text-align: left; ">
                 This type of Annadhanam is special, sometimes a great way to celebrate certain very special days of our lives, wedding anniversary, ceremonies, birthdays etc.
                 <br />
-                <form action="https://www.paypal.com/cgi-bin/webscr" target="_blank" method="post">
+                <form action="https://www.paypal.com/cgi-bin/webscr" target="_top" method="post">
                     <table width="95%" border="0" cellspacing="0" cellpadding="0" class="donation-form">
 
                         <tbody>
@@ -152,7 +152,7 @@
                 <% if(sTemplateJSON[i]['MEDIA_TYPE']=='IMAGE'){%>
 
                 <p class="event-heading" style="text-align:left"> <%- sTemplateJSON[i]['MEDIA_TITLE'] %> </p>
-                <img width="50%" src="<%- sTemplateJSON[i]['MEDIA_ATTACHMENT'] %>" />
+                <img width="50%" src="<%- appUtility.getImagePath(sTemplateJSON[i]['MEDIA_ATTACHMENT']) %>" />
                 <% } else { %>
 
                 <p class="event-heading" style="text-align:left"> <%- sTemplateJSON[i]['MEDIA_TITLE'] %> </p>

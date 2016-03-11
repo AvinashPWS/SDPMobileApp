@@ -73,6 +73,7 @@
     <Content Include="appEngine\appCore\bs\js\bootstrap.min.js" />
     <Content Include="appEngine\appCore\bs\js\npm.js" />
     <Content Include="appEngine\appCore\fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="appEngine\appCore\img\ajax-loader.gif" />
     <Content Include="appEngine\appCore\img\sai-old-back.png" />
     <Content Include="appEngine\appDeviceToken.js" />
     <Content Include="appEngine\appEngine.js" />
