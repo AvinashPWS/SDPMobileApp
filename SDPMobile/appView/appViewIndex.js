@@ -26,7 +26,7 @@ var appViewIndex = {
         for (var i in sResponseJSON) {
             var sBanner = sResponseJSON[i];
 
-            var sLi = $('<li></li>').attr("onclick", "window.open('" + appUtility.getImagePath(sBanner['EVENT_TARGET']) + "', '_blank', 'location=no')");
+            var sLi = $('<li></li>').attr("onclick", "window.open('" + appUtility.getImagePath(sBanner['EVENT_TARGET']) + "', '_blank', 'location=no,closebuttoncaption=Back')");
 
             $(sLi).html('<img src="' + appUtility.getImagePath(sBanner['EVENT_ATTACHMENT']) + '">' +
                     '<div class="text-content">' + sBanner['EVENT_NAME'] + '</div>');
