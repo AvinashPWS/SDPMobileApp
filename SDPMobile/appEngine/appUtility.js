@@ -30,7 +30,7 @@ var appUtility = {
 
     },
     showProgress: function () {
-        $("body").append($('<div></div>').attr('class','waitingmodal'));
+        $("body").append($('<div></div>').attr('class', 'waitingmodal'));
         $("body").addClass("loading");
     },
     closeProgress: function () {
@@ -515,5 +515,10 @@ var appUtility = {
     validatePhoneNo: function (phoneno) {
         var re = /^(\+\d{1,2}\s)?\(?\d{3}\)?[\s.-]\d{3}[\s.-]\d{4}$/;
         return re.test(phoneno);
+    },
+    payPalPost: function (sFormID) {
+        var sSerializeForm = $(sFormID).serialize();
+        var sFormURL = APP_PAYPALURL + "?" + sSerializeForm;
+        window.open(sFormURL, '_system', 'location=yes');
     }
 };

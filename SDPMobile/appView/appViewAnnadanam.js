@@ -66,6 +66,10 @@ var appViewAnnadanam = {
                 $("#appViewAnnadanamMedia").show();
                 break;
         }
+    },
+    
+    submitDonation:function (){
+        appUtility.payPalPost("#appViewAnnadanampaypalform");
     }
 
 };

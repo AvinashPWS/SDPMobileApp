@@ -49,7 +49,7 @@ var appViewDonation = {
         $("#appViewDonationDescription").hide();
         $("#appViewDonationForm1").hide();
         $("#appViewDonationForm2").show();
-        
+
         $("body").scrollTop(0);
     },
     addFamilyMembers: function () {
@@ -149,7 +149,8 @@ var appViewDonation = {
     responseSetDonation: function (sResponseJSON) {
 
         if (sResponseJSON['STATUS'] === 'TRUE') {
-            document.paypalform.submit();
+//            document.paypalform.submit();
+            appUtility.payPalPost('#appViewDonationpaypalform');
         } else {
             appUtility.showMessageGeneric("Please try later or Contact : info@saidattanj.org")
         }

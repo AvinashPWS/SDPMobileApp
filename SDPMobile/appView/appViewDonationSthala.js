@@ -102,9 +102,10 @@ var appViewDonationSthala = {
             sSponsorModel.SNO = i + 1;
             sSponsorModel.FirstName = $.trim($(sponsor).find('[placeholder="Firstname"]').val());
             sSponsorModel.LastName = $.trim($(sponsor).find('[placeholder="Lastname"]').val());
-            
-            if(sSponsorModel.FirstName === "" || sSponsorModel.LastName === ""){
+
+            if (sSponsorModel.FirstName === "" || sSponsorModel.LastName === "") {
                 alert('Please provied all sponsors details');
+                return;
             }
 
             sDetailJSON.push(sSponsorModel);
@@ -115,10 +116,11 @@ var appViewDonationSthala = {
 
         appControllerDonation.requestSetDonationSthalaSeva(SetDonationSthalaSevaJSON);
     },
-    responseSetDonationSthalaSeva: function (sRequestJSON,sResponseJSON) {
+    responseSetDonationSthalaSeva: function (sRequestJSON, sResponseJSON) {
         if (sResponseJSON['STATUS'] === 'TRUE') {
-            document.paypalform.submit();
-        }else{
+            appUtility.payPalPost("#appViewDonationSthalapaypalform");
+
+        } else {
             alert('Please try Later');
         }
     }
