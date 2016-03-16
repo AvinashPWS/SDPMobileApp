@@ -104,7 +104,7 @@ var appViewDonationSthala = {
             sSponsorModel.LastName = $.trim($(sponsor).find('[placeholder="Lastname"]').val());
 
             if (sSponsorModel.FirstName === "" || sSponsorModel.LastName === "") {
-                alert('Please provied all sponsors details');
+                appUtility.showMessageGeneric('Please provide all sponsors details');
                 return;
             }
 
@@ -121,7 +121,7 @@ var appViewDonationSthala = {
             appUtility.payPalPost("#appViewDonationSthalapaypalform");
 
         } else {
-            alert('Please try Later');
+            appUtility.showMessageGeneric('Please try Later');
         }
     }
 
