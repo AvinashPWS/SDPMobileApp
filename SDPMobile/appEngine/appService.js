@@ -7,6 +7,7 @@ var sContentType = "application/json; charset=utf-8";
 //var APP_SITE_URL = "http://localhost:64046";
 var APP_SERVICE_URL = "http://saidattanj.org/SDPAdmin/API/SDPMobileService.aspx/";
 var APP_SITE_URL = "http://saidattanj.org";
+var APP_PAYPALURL = "https://www.paypal.com/cgi-bin/webscr";
 
 sVersion = "1.0.0";
 sSplashScreen = true;
