@@ -51,9 +51,30 @@
                 <a class="btn btn-success pull-right" onclick="javascript:appViewDonationSthala.addSponsor();">Add Sponsor</a>
             </div>
             <div id="appViewDonationSthalaSponsorList">
+                <div class="panel panel-default" data-role="sponsor">
+                    <div class="panel-body">
+                        <div class="input-group">
+                            <input type="text" class="form-control" value="" placeholder="Firstname" />
+                            <span class="input-group-btn">
+                                <a class="btn btn-default clearbtn form-control">
+                                    <i class="glyphicon glyphicon-remove-circle"></i>
+                                </a>
+                            </span>
+                        </div>
+                        <br>
+                        <div class="input-group">
+                            <input type="text" class="form-control" value="" placeholder="Lastname" />
+                            <span class="input-group-btn">
+                                <a class="btn btn-default clearbtn form-control">
+                                    <i class="glyphicon glyphicon-remove-circle"></i>
+                                </a>
+                            </span>
+                        </div>
+                    </div>
+                </div>
             </div>
             <div class="well well-sm">
-                Total Amount to be Transfered : <span id="appViewDonationSthalaSponsorCount">0 </span> * $11 = $<span id="appViewDonationSthalaTotalAmount">0</span>
+                Total Amount : <span id="appViewDonationSthalaSponsorCount">1</span> * $11 = $<span id="appViewDonationSthalaTotalAmount">11</span>
             </div>
             <div class="text-center">
                 <a class="btn btn-success" onclick="javascript:appViewDonationSthala.submitSponsors();">Submit</a>

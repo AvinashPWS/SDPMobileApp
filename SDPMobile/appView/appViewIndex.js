@@ -43,6 +43,7 @@ var appViewIndex = {
     },
     responseSponsorEvents: function (sResponseJSON) {
         //TBD
+        $("#TodaySponsorMarquee h2").html('');
         for (var i in sResponseJSON) {
             var sFlashNews = sResponseJSON[i];
             var sPtag = $("<span></span>").html(" &#42; " + sFlashNews['EVENT_NAME']);

@@ -13,9 +13,9 @@ var appViewDonation = {
             appViewDonation.onChangeDonationType(this);
         });
 
-        $("#sb-site").css("min-height", "0px");
+        //$("#sb-site").css("min-height", "0px");
 
-        $("#sb-site .pujaList").css({"min-height": appUtility.setHeight(1) + "px", "max-height": "0px"});
+        //$("#sb-site .pujaList").css({"min-height": appUtility.setHeight(1) + "px", "max-height": "0px"});
     },
     onChangeDonationType: function (sSelector) {
         var amount = $(sSelector).val();
